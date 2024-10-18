@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akshaysharmaapi-coll-107b645985af4558bc0dcc1b92c9f817-depl
+  labels:
+    app: akshaysharmaapi-coll-107b645985af4558bc0dcc1b92c9f817
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akshaysharmaapi-coll-107b645985af4558bc0dcc1b92c9f817
+  template:
+    metadata:
+      labels:
+        app: akshaysharmaapi-coll-107b645985af4558bc0dcc1b92c9f817
+    spec:
+      containers:
+        - name: akshaysharmaapi-coll-107b645985af4558bc0dcc1b92c9f817
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:akshaysharmaapi-coll-107b645985af4558bc0dcc1b92c9f817
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9007
